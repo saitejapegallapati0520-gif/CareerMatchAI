@@ -1,0 +1,39 @@
+{
+  "matching": {
+    "keyword_weight": 0.8,
+    "vector_weight": 0.2
+  },
+  "job_search": {
+    "fallback_queries": [
+      "software developer",
+      "data analyst",
+      "cloud engineer",
+      "devops engineer",
+      "data engineer",
+      "backend developer",
+      "full stack developer",
+      "software engineer"
+    ],
+    "fallback_jobs_per_query": 20,
+    "results_per_page": 50,
+    "max_jobs": 100,
+    "min_match_score": 80,
+    "markets": {
+      "United States": "us",
+      "United Kingdom": "gb",
+      "India": "in",
+      "Canada": "ca",
+      "Australia": "au",
+      "Germany": "de",
+      "France": "fr",
+      "Italy": "it",
+      "Netherlands": "nl",
+      "Poland": "pl",
+      "Singapore": "sg",
+      "New Zealand": "nz",
+      "Belgium": "be",
+      "Brazil": "br",
+      "South Africa": "za"
+    }
+  }
+}
