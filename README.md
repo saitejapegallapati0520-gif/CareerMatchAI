@@ -104,8 +104,8 @@ CareerMatchAI/
 1. **Clone the repository** (or use your local project folder):
 
    ```bash
-   git clone https://github.com/saitejapegallapati0520-gif/CareerMatch_AI_Project.git
-   cd CareerMatch_AI_Project
+   git clone https://github.com/saitejapegallapati0520-gif/CareerMatchAI.git
+   cd CareerMatchAI
    ```
 
 2. **Create and activate a virtual environment** (recommended):
