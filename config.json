@@ -1,7 +1,7 @@
 {
   "matching": {
-    "keyword_weight": 0.8,
-    "vector_weight": 0.2
+    "keyword_weight": 0.6,
+    "vector_weight": 0.4
   },
   "job_search": {
     "fallback_queries": [
@@ -17,7 +17,7 @@
     "fallback_jobs_per_query": 20,
     "results_per_page": 50,
     "max_jobs": 100,
-    "min_match_score": 80,
+    "min_match_score": 60,
     "markets": {
       "United States": "us",
       "United Kingdom": "gb",

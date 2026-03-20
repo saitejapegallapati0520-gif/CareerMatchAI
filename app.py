@@ -24,7 +24,21 @@ from Modules.resume_builder import build_tailored_resume, generate_docx
 from Modules.resume_parser import parse_resume
 
 
-load_dotenv()
+def _load_environment() -> None:
+    """Load environment variables from .config first, then fallback to .env."""
+    try:
+        project_root = os.path.dirname(__file__)
+        config_path = os.path.join(project_root, ".config")
+        env_path = os.path.join(project_root, ".env")
+        if os.path.isfile(config_path):
+            load_dotenv(dotenv_path=config_path, override=True)
+        else:
+            load_dotenv(dotenv_path=env_path, override=False)
+    except Exception:
+        load_dotenv()
+
+
+_load_environment()
 
 APP_TITLE = "CareerMatch AI"
 TEMP_DIR = "temp_uploads"

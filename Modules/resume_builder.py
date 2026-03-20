@@ -14,7 +14,21 @@ from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 
-load_dotenv()
+def _load_environment() -> None:
+    """Load environment variables from .config first, then fallback to .env."""
+    try:
+        project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        config_path = os.path.join(project_root, ".config")
+        env_path = os.path.join(project_root, ".env")
+        if os.path.isfile(config_path):
+            load_dotenv(dotenv_path=config_path, override=True)
+        else:
+            load_dotenv(dotenv_path=env_path, override=False)
+    except Exception:
+        load_dotenv()
+
+
+_load_environment()
 logger = logging.getLogger(__name__)
 
 
